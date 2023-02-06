@@ -37,6 +37,7 @@ var words = []string{
 func main() {
 
 	fmt.Println(Frequency(words))
+	ExampleCommaOk()
 
 }
 
@@ -48,5 +49,30 @@ func Frequency(words []string) map[string]int {
 
 	}
 	return freq
+
+}
+
+func ExampleCommaOk() {
+	prices := map[string]int{
+		"banana": 2,
+	}
+
+	price, ok := prices["banana"]
+
+	if ok {
+		fmt.Printf("The price of banana is $%d\n", price)
+	} else {
+
+		fmt.Printf("We don't have bananas")
+	}
+
+	apple, ok := prices["apple"]
+
+	if ok {
+		fmt.Printf("The price of apple is $%d\n", apple)
+	} else {
+
+		fmt.Printf("We don't have apples")
+	}
 
 }
